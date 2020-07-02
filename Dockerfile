@@ -1,8 +1,8 @@
-FROM phusion/passenger-ruby22
+FROM phusion/passenger-ruby25
 
 ENV HOME /home/app/webapp
 ENV BLACKLIGHT_INSTALL_OPTIONS "--devise"
-RUN gem install rails && rails new /home/app/webapp --database postgresql -q -m https://raw.githubusercontent.com/sul-dlss/spotlight/master/template.rb
+RUN gem install rails && rails new /home/app/webapp --database postgresql -q -m https://raw.githubusercontent.com/projectblacklight/spotlight/master/template.rb
 
 WORKDIR /home/app/webapp
 
